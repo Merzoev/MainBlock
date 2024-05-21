@@ -17,3 +17,21 @@ for (int i = 0; i < n; i++)
     Console.Write($"Введите {i + 1} элемент массива: ");
     array[i] = Console.ReadLine();
 }
+
+string[] newArray = new string[n];
+int newArrayIndex = 0;
+
+for (int i = 0; i < n; i++)
+{
+    if (array[i].Length <= 3)
+    {
+        newArray[newArrayIndex] = array[i];
+        newArrayIndex++;
+    }
+}
+
+Console.Write("Новый массив: ");
+for (int i = 0; i < newArrayIndex; i++)
+{
+    Console.Write($"{newArray[i]} ");
+}
